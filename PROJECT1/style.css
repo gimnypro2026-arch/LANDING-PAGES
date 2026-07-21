@@ -71,3 +71,59 @@ button {
 button:hover {
     background-color: #15803d;
 }
+
+/* ==========================================
+   تنسيقات قسم الهيرو بـ Flexbox (إضافة جديدة)
+   ========================================== */
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+/* --- أضف السطر التالي فقط --- */
+    flex-direction: row-reverse; /* هذا السطر سيجعل الساعة على اليسار في المتصفحات الداعمة للـ RTL */
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    display: block;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-text h1 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #e62125;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #c4181c;
+}
