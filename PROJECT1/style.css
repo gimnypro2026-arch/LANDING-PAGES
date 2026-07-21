@@ -1,0 +1,73 @@
+/* 1. جلب خط عربي حديث من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+/* 2. تنسيقات عامة للصفحة */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* 3. تنسيق أقسام الصفحة لتظهر كبطاقات مرتبة */
+section {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 4. عناوين الصفحة */
+h1 {
+    color: #111827;
+    font-size: 24px;
+}
+
+h2 {
+    color: #1f2937;
+    font-size: 20px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+/* 5. زر الشراء الرئيسي (CTA) */
+a {
+    display: inline-block;
+    background-color: #dc2626;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 6. تحسين نموذج الطلب وحقول الإدخال */
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* زر إرسال الطلب الأخير */
+button {
+    background-color: #16a34a;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #15803d;
+}
