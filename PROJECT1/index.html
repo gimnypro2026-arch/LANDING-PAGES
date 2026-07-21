@@ -38,7 +38,8 @@
     <section id="order-form">
         <h2>أدخل بياناتك للطلب وسنتصل بك لتأكيد الشحن</h2>
         
-        <form>
+        <!-- نموذج الطلب -->
+        <form id="orderForm">
             <!-- حقل الاسم -->
             <div>
                 <label for="fullname">الاسم الكامل:</label><br>
@@ -67,7 +68,13 @@
             <!-- زر التأكيد (Call To Action) -->
             <button type="submit">تأكيد الطلب الآن (الدفع عند الاستلام)</button>
         </form>
-    </section>
 
+        <!-- رسالة النجاح (تظهر بعد إرسال الطلب) -->
+        <div id="successMessage" style="display: none; text-align: center; padding: 20px; background-color: #e8f5e9; border-radius: 8px; margin-top: 15px;">
+            <h3 style="color: #2e7d32; margin-bottom: 10px;">🎉 تم استلام طلبك بنجاح!</h3>
+            <p style="color: #1b5e20;">شكراً لك، سنتصل بك قريباً عبر الواتساب لتأكيد الشحن.</p>
+        </div>
+    </section>
+<script src="script.js"></script>
 </body>
 </html>
