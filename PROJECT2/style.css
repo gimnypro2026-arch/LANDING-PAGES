@@ -1,0 +1,222 @@
+/* 1️⃣ الإعدادات المتغيرة للألوان (دعم الوضع الفاتح والداكن) */
+:root {
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --card-bg: #ffffff;
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --border-color: #e2e8f0;
+    --nav-bg: rgba(255, 255, 255, 0.8);
+}
+
+/* الألوان عند تفعيل الوضع الداكن */
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+    --nav-bg: rgba(15, 23, 42, 0.8);
+}
+
+/* 2️⃣ ضبط التنسيق العام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 3️⃣ الهيدر وشريط التنقل */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    position: fixed; /* تم تغييرها إلى fixed لتكون ثابتة في أعلى الشاشة دائماً */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* إضافة مسافة أعلى قسم الهيرو حتى لا يختفي تحت الهيدر */
+.hero {
+    margin-top: 80px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.navbar nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 4️⃣ قسم الهيرو (Hero) */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary, .btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+/* 5️⃣ المميزات والأسعار */
+.features, .pricing, .faq {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.features-grid, .pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.feature-card, .price-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 16px;
+    width: 280px;
+    text-align: right;
+}
+
+.price-card.popular {
+    border: 2px solid var(--primary-color);
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.price-card ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.price-card li {
+    margin-bottom: 10px;
+}
+
+/* 6️⃣ الأسئلة الشائعة (Accordion) */
+.faq-container {
+    max-width: 600px;
+    margin: 30px auto 0;
+}
+
+.faq-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px 20px;
+    text-align: right;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-answer {
+    padding: 0 20px 15px;
+    display: none; /* مخفي افتراضياً لفتحه بـ JS */
+    text-align: right;
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid var(--border-color);
+    opacity: 0.7;
+}
