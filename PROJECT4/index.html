@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتج الساعات الذكية - التجربة الفاخرة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- خلفية إضاءات عصرية (Glow Background) -->
+    <div class="glow-bg"></div>
+
+    <!-- 1️⃣ الهيدر الشفاف -->
+    <header class="navbar">
+        <div class="logo">💎 LUMINA <span>WATCH</span></div>
+        <nav>
+            <a href="#features">المميزات</a>
+            <a href="#order">اطلب الآن</a>
+        </nav>
+    </header>
+
+    <!-- 2️⃣ الهيرو مع تأثير الكارت الـ 3D -->
+    <section class="hero">
+        <div class="hero-text">
+            <span class="badge">✨ الإصدار الفاخر 2026</span>
+            <h1>ساعة Lumina Pro الذكية</h1>
+            <p>التوازن المثالي بين الأناقة الفائقة والتكنولوجيا الذكية لمتابعة أعمالك وصحتك لحظة بلحظة.</p>
+            <div class="hero-btns">
+                <a href="#order" class="btn btn-glow">طلب سريع 🚀</a>
+            </div>
+        </div>
+
+        <!-- 3D Card Interactive Visual -->
+        <div class="product-card-3d" id="productCard">
+            <div class="card-glass">
+                <span class="card-tag">LIMITED EDITION</span>
+                <div class="product-emoji">⌚</div>
+                <h3>Lumina Watch Pro</h3>
+                <p class="price">$299 <span class="old-price">$399</span></p>
+                <ul class="specs">
+                    <li>⚡ بطارية تدوم 10 أيام</li>
+                    <li>🛡️ مقاومة للماء 50m</li>
+                    <li>📊 تتبع مؤشرات الصحة الذكي</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ نموذج الطلب المزدوج (واتساب + إيميل) -->
+    <section id="order" class="order-section">
+        <div class="form-card-glass">
+            <h2>🛍️ تأكيد الطلب المباشر</h2>
+            <p>اختر طريقة الإرسال المفضلة لديك وسنتواصل معك فوراً:</p>
+
+            <!-- 
+                إرسال للإيميل عن طريق Formspree:
+                استبدل YOUR_FORMSPREE_ID بـ ID حسابك على Formspree لما تعمل حساب مجاني
+            -->
+            <form id="checkoutForm" action="https://formspree.io/f/xeeylylr" method="POST">
+                <div class="input-group">
+                    <input type="text" id="custName" name="name" placeholder="الاسم الكامل" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" id="custPhone" name="phone" placeholder="رقم الهاتف (مع رمز الدولة)" required>
+                </div>
+                <div class="input-group">
+                    <select id="productPackage" name="package">
+                        <option value="العبوة الأساسية ($299)">العبوة الأساسية - ساعة واحدة ($299)</option>
+                        <option value="العرض الذهبي ($499)">العرض الذهبي - ساعتين + خصم ($499)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <textarea id="custNotes" name="notes" placeholder="أي ملاحظات إضافية (اختياري)"></textarea>
+                </div>
+
+                <!-- أزرار الإرسال المتعددة -->
+                <div class="action-buttons">
+                    <!-- 1. إرسال عبر الواتساب مباشرة -->
+                    <button type="button" id="whatsappBtn" class="btn btn-whatsapp">
+                        📱 اطلب عبر الواتساب فوراً
+                    </button>
+                    
+                    <!-- 2. إرسال عبر الإيميل -->
+                    <button type="submit" id="emailBtn" class="btn btn-email">
+                        ✉️ إرسال الطلب للإيميل
+                    </button>
+                </div>
+            </form>
+            
+            <p id="formStatus" class="form-status"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 جميع الحقوق محفوظة - Lumina Premium</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+/* ----------------------------------------------------
+   1️⃣ المتغيرات والألوان الأساسية (Modern Dark Glass)
+   ---------------------------------------------------- */
+:root {
+    --bg-dark: #0a0c10;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.12);
+    --primary-glow: #3b82f6;
+    --accent-glow: #8b5cf6;
+    --whatsapp-green: #25d366;
+    --whatsapp-hover: #1da851;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+/* خلفية الإضاءات المتوهجة (Background Glow Effects) */
+.glow-bg {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 40%, transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ----------------------------------------------------
+   2️⃣ الهيدر الشفاف (Glass Navbar)
+   ---------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background: rgba(10, 12, 16, 0.7);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-glow);
+}
+
+.navbar nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--primary-glow);
+}
+
+/* ----------------------------------------------------
+   3️⃣ الهيرو وكارت المنتج الـ 3D
+   ---------------------------------------------------- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 160px 8% 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: var(--primary-glow);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #d1d5db 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* كارت المنتج الزجاجي الـ 3D */
+.product-card-3d {
+    flex: 1;
+    min-width: 300px;
+    perspective: 1000px;
+}
+
+.card-glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+.product-card-3d:hover .card-glass {
+    transform: translateY(-10px) rotateX(4deg) rotateY(-4deg);
+    box-shadow: 0 30px 60px rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--accent-glow);
+    font-weight: 700;
+}
+
+.product-emoji {
+    font-size: 5rem;
+    margin: 20px 0;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+}
+
+.card-glass h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-glow);
+    margin-bottom: 20px;
+}
+
+.old-price {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.specs {
+    list-style: none;
+    text-align: right;
+    border-top: 1px solid var(--card-border);
+    padding-top: 20px;
+}
+
+.specs li {
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ----------------------------------------------------
+   4️⃣ قسم استمارة الطلب (Order Section)
+   ---------------------------------------------------- */
+.order-section {
+    padding: 60px 8%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-card-glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-card-glass h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.form-card-glass p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    color: var(--text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+}
+
+.input-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* الأزرار والمتفاعلات */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-glow {
+    background: linear-gradient(135deg, var(--primary-glow), var(--accent-glow));
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.5);
+}
+
+.btn-whatsapp {
+    background-color: var(--whatsapp-green);
+    color: #fff;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--whatsapp-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-email {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    border: 1px solid var(--card-border);
+}
+
+.btn-email:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-status {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 40px;
+}
+
+/* تجاوب الشاشات (Responsive) */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.1rem; }
+    .hero { text-align: center; }
+    .specs { text-align: center; }
+}
