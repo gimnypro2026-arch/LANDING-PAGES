@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA - العناية الطبيعية الفاخرة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1️⃣ الهيدر في قمة الصفحة تماماً -->
+    <header class="navbar">
+        <div class="logo">🌿 AURA <span>BOTANICALS</span></div>
+        <div class="cart-icon-btn" id="cartToggle">
+            🛒 السلة (<span id="cartCount">0</span>)
+        </div>
+    </header>
+
+    <!-- 2️⃣ قسم الهيرو تحت الهيدر مباشرة -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge">🍃 منتجات عضوية 100%</span>
+            <h1>جمالكِ الطبيعي يتألق مع AURA</h1>
+            <p>مجموعة حصرية مستخلصة من أندر الزيوت والأعشاب الطبيعية لترطيب ونضارة فائقة.</p>
+            <a href="#shop" class="btn btn-primary">تصفح المنتجات 🛍️</a>
+        </div>
+    </section>
+
+    <!-- 3️⃣ معرض المنتجات -->
+    <section id="shop" class="shop-section">
+        <h2 class="section-title">المجموعة المختارة</h2>
+        
+        <div class="filter-tabs">
+            <button class="tab-btn active" data-category="all">الكل</button>
+            <button class="tab-btn" data-category="face">عناية بالوجه</button>
+            <button class="tab-btn" data-category="body">عناية بالجسم</button>
+        </div>
+
+        <div class="products-grid">
+            
+            <div class="product-card" data-category="face">
+                <div class="img-wrapper">
+                    <img src="https://images.pexels.com/photos/4041391/pexels-photo-4041391.jpeg?auto=compress&cs=tinysrgb&w=600" alt="سيروم الوجه">
+                </div>
+                <div class="product-info">
+                    <span class="p-category">عناية بالوجه</span>
+                    <h3>سيروم النضارة الذهبي</h3>
+                    <p class="p-price">$45</p>
+                    <button class="btn add-to-cart-btn" data-id="1" data-name="سيروم النضارة الذهبي" data-price="45">إضافة للسلة 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="face">
+                <div class="img-wrapper">
+                    <img src="https://images.pexels.com/photos/3685530/pexels-photo-3685530.jpeg?auto=compress&cs=tinysrgb&w=600" alt="كريم المرطب">
+                </div>
+                <div class="product-info">
+                    <span class="p-category">عناية بالوجه</span>
+                    <h3>كريم الترطيب العميق</h3>
+                    <p class="p-price">$35</p>
+                    <button class="btn add-to-cart-btn" data-id="2" data-name="كريم الترطيب العميق" data-price="35">إضافة للسلة 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="body">
+                <div class="img-wrapper">
+                    <img src="https://images.pexels.com/photos/672051/pexels-photo-672051.jpeg?auto=compress&cs=tinysrgb&w=600" alt="زيت اللافندر"><img src="https://images.pexels.com/photos/6621323/pexels-photo-6621323.jpeg?auto=compress&cs=tinysrgb&w=600" alt="زيت الجسم">
+                </div>
+                <div class="product-info">
+                    <span class="p-category">عناية بالجسم</span>
+                    <h3>زيت اللافندر للاسترخاء</h3>
+                    <p class="p-price">$28</p>
+                    <button class="btn add-to-cart-btn" data-id="3" data-name="زيت اللافندر للاسترخاء" data-price="28">إضافة للسلة 🛒</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="body">
+                <div class="img-wrapper">
+                  <img src="https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=600" alt="مقشر القهوة">  <img src="https://images.pexels.com/photos/4202392/pexels-photo-4202392.jpeg?auto=compress&cs=tinysrgb&w=600" alt="مقشر الجسم">
+                </div>
+                <div class="product-info">
+                    <span class="p-category">عناية بالجسم</span>
+                    <h3>مقشر القهوة والشيا</h3>
+                    <p class="p-price">$30</p>
+                    <button class="btn add-to-cart-btn" data-id="4" data-name="مقشر القهوة والشيا" data-price="40">إضافة للسلة 🛒</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4️⃣ السلة الجانبية -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>🛒 سلة المشتريات</h3>
+            <button class="close-btn" id="closeCart">&times;</button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <p class="empty-msg">السلة فارغة حالياً</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>الإجمالي:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <div class="checkout-inputs">
+                <input type="text" id="custName" placeholder="الاسم الكامل" required>
+                <input type="tel" id="custPhone" placeholder="رقم الهاتف" required>
+            </div>
+            <button class="btn btn-whatsapp" id="sendWhatsApp">إرسال الطلب عبر الواتساب 📱</button>
+        </div>
+    </div>
+
+    <!-- 5️⃣ فووتر فخم واحترافي جديد -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>🌿 AURA BOTANICALS</h3>
+                <p>عناية طبيعية فائقة مستوحاة من الطبيعة لتعزيز صحة ونضارة بشرتك بأمان.</p>
+            </div>
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#shop">المنتجات</a></li>
+                    <li><a href="#cartToggle">سلة المشتريات</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <p>💬 واتساب خدمة العملاء متاح 24/7</p>
+                <p>📍 جدة / الرياض - المملكة العربية السعودية</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 AURA Botanicals - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

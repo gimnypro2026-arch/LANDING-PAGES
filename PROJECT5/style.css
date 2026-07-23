@@ -1,0 +1,406 @@
+/* ----------------------------------------------------
+   1️⃣ الألوان والمتغيرات (Natural Minimalist)
+   ---------------------------------------------------- */
+:root {
+    --primary-color: #2e4a3b;
+    --accent-color: #d4a373;
+    --bg-light: #fefae0;
+    --card-bg: #ffffff;
+    --text-dark: #1c2d24;
+    --text-muted: #6c757d;
+    --whatsapp-green: #25d366;
+    --border-color: #e9ecef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: var(--text-dark);
+    direction: rtl;
+}
+
+/* ----------------------------------------------------
+   2️⃣ الهيدر (Fixed Top Navbar)
+   ---------------------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.logo span {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+.cart-icon-btn {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.cart-icon-btn:hover {
+    transform: scale(1.05);
+    background: #1e3328;
+}
+
+/* ----------------------------------------------------
+   3️⃣ الهيرو (Hero Section)
+   ---------------------------------------------------- */
+.hero {
+    position: relative;
+    height: 55vh;
+    background: url('https://images.pexels.com/photos/3738339/pexels-photo-3738339.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(28, 45, 36, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--accent-color);
+}
+
+/* ----------------------------------------------------
+   4️⃣ معرض المنتجات والتنظيم
+   ---------------------------------------------------- */
+.shop-section {
+    padding: 60px 8%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    padding: 10px 24px;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .img-wrapper img {
+    transform: scale(1.08);
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.p-category {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: var(--text-dark);
+}
+
+.p-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background: #f1f3f5;
+    color: var(--text-dark);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* ----------------------------------------------------
+   5️⃣ السلة الجانبية (Cart Drawer)
+   ---------------------------------------------------- */
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 380px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 5px 0 25px rgba(0,0,0,0.15);
+    z-index: 1000;
+    transition: left 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.cart-drawer.open {
+    left: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.empty-msg {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 40px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.checkout-inputs input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    outline: none;
+}
+
+.btn-whatsapp {
+    width: 100%;
+    padding: 14px;
+    background: var(--whatsapp-green);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+}
+
+/* ----------------------------------------------------
+   6️⃣ الفووتر الاحترافي (Main Footer)
+   ---------------------------------------------------- */
+.main-footer {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 50px 8% 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h3, .footer-col h4 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.footer-col p {
+    line-height: 1.6;
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
