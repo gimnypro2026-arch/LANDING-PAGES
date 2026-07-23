@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA AI - منصة الذكاء الاصطناعي المستقبلية</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- استدعاء خط معاصر من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- حاوية الإشعارات المنبثقة (Toast Container) -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- 1️⃣ الهيدر المستقبلي مع تأثير الـ Glassmorphism -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">⚡</span> AURA<span class="highlight">.AI</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#features">المميزات</a>
+            <a href="#dashboard">المنصة</a>
+            <a href="#pricing">الباقات</a>
+            <a href="#faq">الأسئلة</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn btn-outline" id="loginBtn">تسجيل الدخول</button>
+            <button class="btn btn-glow" id="startFreeBtn">ابدأ مجاناً 🚀</button>
+        </div>
+    </header>
+
+    <!-- 2️⃣ قسم الهيرو مع تدرجات نيون متحركة -->
+    <section class="hero">
+        <div class="glow-sphere glow-1"></div>
+        <div class="glow-sphere glow-2"></div>
+        
+        <div class="hero-content">
+            <div class="cyber-badge">✨ الجيل القادم من تحليل البيانات بالذكاء الاصطناعي</div>
+            <h1>طوّر أعمالك باستخدام قوة <br><span class="gradient-text">الذكاء الاصطناعي الفائق</span></h1>
+            <p>منصة متكاملة لتلخيص وتحليل وتوقع البيانات الضخمة مع إمكانية الربط البرمجي السريع وتأمين فائق للبيانات.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-glow btn-lg" id="heroStartBtn">تجربة المنصة الآن مجاناً ⚡</button>
+                <a href="#dashboard" class="btn btn-outline btn-lg">شاهد المعاينة الحية 👁️</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ قسم معاينة الداشبورد التفاعلي (Interactive Dashboard Preview) -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="section-header">
+            <h2>لوحة تحكم ذكية وشاملة</h2>
+            <p>تحكّم كامل في جميع بياناتك وتدفقات العمل من مكان واحد</p>
+        </div>
+
+        <div class="dashboard-mockup">
+            <!-- الشريط الجانبي الوهمي -->
+            <div class="dash-sidebar">
+                <div class="dash-brand">⚡ AURA Core</div>
+                <div class="dash-menu">
+                    <div class="dash-item active" data-tab="analytics">📊 التحليلات الحية</div>
+                    <div class="dash-item" data-tab="users">👥 النشاط والعملاء</div>
+                    <div class="dash-item" data-tab="settings">⚙️ أداء النظام</div>
+                </div>
+            </div>
+
+            <!-- محتوى لوحة التحكم التفاعلي -->
+            <div class="dash-content">
+                <div class="dash-top-bar">
+                    <span class="status-dot"></span> النظام يعمل بكفاءة 99.9%
+                    <span class="live-clock" id="liveClock">00:00:00</span>
+                </div>
+
+                <div class="dash-tab-panel active" id="tab-analytics">
+                    <div class="dash-cards-grid">
+                        <div class="stat-card">
+                            <span class="stat-title">إجمالي الطلبات</span>
+                            <span class="stat-value">1,248,900</span>
+                            <span class="stat-change positive">+24.5% ▲</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-title">سرعة الاستجابة</span>
+                            <span class="stat-value">12ms</span>
+                            <span class="stat-change positive">فائقة ⚡</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-title">الدقة والاعتمادية</span>
+                            <span class="stat-value">99.8%</span>
+                            <span class="stat-change positive">+1.2% ▲</span>
+                        </div>
+                    </div>
+                    <!-- رسم بياني بصري تفاعلي بالـ CSS -->
+                    <div class="visual-chart">
+                        <div class="chart-bar" style="--height: 40%" data-val="40k"></div>
+                        <div class="chart-bar" style="--height: 65%" data-val="65k"></div>
+                        <div class="chart-bar" style="--height: 50%" data-val="50k"></div>
+                        <div class="chart-bar" style="--height: 85%" data-val="85k"></div>
+                        <div class="chart-bar" style="--height: 95%" data-val="95k"></div>
+                        <div class="chart-bar" style="--height: 70%" data-val="70k"></div>
+                    </div>
+                </div>
+
+                <div class="dash-tab-panel" id="tab-users">
+                    <div class="user-list">
+                        <div class="user-row"><span>👤 أحمد المالكي</span><span>نشط الآن</span><span class="badge-tag">Pro</span></div>
+                        <div class="user-row"><span>👤 سارة الغامدي</span><span>قبل 3 دقائق</span><span class="badge-tag">Enterprise</span></div>
+                        <div class="user-row"><span>👤 خالد الدوسري</span><span>قبل 12 دقيقة</span><span class="badge-tag">Basic</span></div>
+                    </div>
+                </div>
+
+                <div class="dash-tab-panel" id="tab-settings">
+                    <div class="system-status">
+                        <p>🔒 تشفير البيانات: <strong>AES-256 Bit (مميّز)</strong></p>
+                        <p>🌐 خوادم التوزيع: <strong>تغطية عالمية (12 المركز)</strong></p>
+                        <p>⚡ استهلاك المعالج: <strong>14%</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ حاسبة الباقات التفاعلية (Interactive Pricing Calculator) -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-header">
+            <h2>باقات مرنة ومخصصة لاحتياجاتك</h2>
+            <p>اختر عدد عمليات المعالجة الشهرية وشاهد التكلفة الدقيقة فوراً</p>
+        </div>
+
+        <div class="pricing-calculator">
+            <div class="slider-container">
+                <label for="calcSlider">عدد عمليات المعالجة/الطلبات شهرياً:</label>
+                <div class="slider-val-display"><span id="requestsDisplay">50,000</span> طلب / شهر</div>
+                <input type="range" id="calcSlider" min="10000" max="500000" step="10000" value="50000">
+            </div>
+
+            <div class="pricing-cards">
+                <div class="price-card">
+                    <h3>الباقة الأساسية</h3>
+                    <p class="price-amount" id="starterPrice">$29<span>/شهر</span></p>
+                    <ul class="price-features">
+                        <li>✅ الوصول للنماذج الأساسية</li>
+                        <li>✅ دعم الفني عبر الإيميل</li>
+                        <li>✅ سرعة معالجة قياسية</li>
+                    </ul>
+                    <button class="btn btn-outline select-plan-btn" data-plan="الأساسية">اختيار الباقة</button>
+                </div>
+
+                <div class="price-card popular">
+                    <div class="pop-badge">الأكثر طلباً 🔥</div>
+                    <h3>الباقة الاحترافية PRO</h3>
+                    <p class="price-amount" id="proPrice">$79<span>/شهر</span></p>
+                    <ul class="price-features">
+                        <li>✅ كل مميزات الباقة الأساسية</li>
+                        <li>✅ معالجة فورية بدون انتظار</li>
+                        <li>✅ ربط API غير محدود</li>
+                        <li>✅ دعم متواصل 24/7</li>
+                    </ul>
+                    <button class="btn btn-glow select-plan-btn" data-plan="الاحترافية PRO">بدء التجربة المجانية</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ قسم الأسئلة الشائعة المطوي (Interactive FAQ Accordion) -->
+    <section id="faq" class="faq-section">
+        <div class="section-header">
+            <h2>الأسئلة الشائعة</h2>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">هل يمكنني تجربة المنصة مجاناً؟ <span>+</span></div>
+                <div class="faq-answer">نعم! نوفر تجربة مجانية كاملة لمدة 14 يوماً بدون الحاجة لإدخال بيانات البطاقة الائتمانية.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">كيف يتم حماية وتشفير بيانات شركتي؟ <span>+</span></div>
+                <div class="faq-answer">نعتمد أفضل معايير الأمان العالمية بتشفير AES-256، ولا يتم استخدام بياناتك أبداً لتدريب أي نماذج عامة.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">هل يمكنني ترقية أو إلغاء الباقة في أي وقت؟ <span>+</span></div>
+                <div class="faq-answer">بالتأكيد، يمكنك الترقية أو التخفيض أو إلغاء الاشتراك بنقرة واحدة من لوحة التحكم الخاصة بك.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6️⃣ الفووتر المستقبلي -->
+    <footer class="cyber-footer">
+        <div class="footer-grid">
+            <div>
+                <div class="logo">⚡ AURA<span class="highlight">.AI</span></div>
+                <p>صُنعت للمستقبل. منصة الذكاء الاصطناعي الأولى للشركات والمطورين.</p>
+            </div>
+            <div>
+                <h4>المنتجات</h4>
+                <p>AURA Engine</p>
+                <p>AURA Vision</p>
+                <p>API Access</p>
+            </div>
+            <div>
+                <h4>الشركة</h4>
+                <p>عن AURA</p>
+                <p>الوظائف</p>
+                <p>المدونة</p>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>© 2026 AURA.AI Inc. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <!-- 7️⃣ نافذة تسجيل الدخول المنبثقة (Login Modal) -->
+<div id="loginModal" class="modal-overlay">
+    <div class="modal-card">
+        <button class="close-modal" id="closeModalBtn">&times;</button>
+        <div class="modal-header">
+            <h3>تسجيل الدخول إلى <span class="highlight">AURA.AI</span></h3>
+            <p>أدخل بياناتك للوصول إلى لوحة التحكم</p>
+        </div>
+        <form id="loginForm" onsubmit="return false;">
+            <div class="input-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" placeholder="name@company.com" required>
+            </div>
+            <div class="input-group">
+                <label>كلمة المرور</label>
+                <input type="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-glow btn-full">دخول 🚀</button>
+        </form>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
