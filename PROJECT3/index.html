@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة النمو الرقمي - حاسبة الأرباح والحلول الذكية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1️⃣ شريط التنقل (Header) -->
+    <header class="navbar">
+        <div class="logo">🚀 النمو الرقمي</div>
+        <nav>
+            <a href="#calculator">حاسبة التوفير</a>
+            <a href="#features">الخدمات</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+        <button id="themeToggle" class="theme-btn">🌙 الوضع الداكن</button>
+    </header>
+
+    <!-- 2️⃣ قسم الهيرو (Hero Section) -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge-hero">✨ حلول متكاملة لرواد الأعمال</span>
+            <h1>ضاعف كفاءة أداء عملك التجاري باستخدام الحلول الأوتوماتيكية</h1>
+            <p>احسب مقدار الوقت والتكاليف التي توفرها منظومتنا الذكية لمشروعك فوراً.</p>
+            <a href="#calculator" class="btn btn-primary">احسب توفيرك الآن 📊</a>
+        </div>
+    </section>
+
+    <!-- 3️⃣ قسم الحاسبة التفاعلية (Interactive Calculator) -->
+    <section id="calculator" class="calculator-section">
+        <h2>📊 حاسبة التوفير المتوقع لمشروعك</h2>
+        <p class="section-desc">حرك الشريط لتحديد عدد المعاملات/الطلبات الشهرية لديك لمعرفة التوفير التقديري:</p>
+
+        <div class="calculator-card">
+            <div class="slider-group">
+                <label for="ordersSlider">عدد المعاملات الشهرية: <span id="ordersValue">500</span> معاملة</label>
+                <input type="range" id="ordersSlider" min="100" max="10000" step="100" value="500">
+            </div>
+
+            <div class="calc-results">
+                <div class="result-box">
+                    <h4>الوقت الموفر شهرياً</h4>
+                    <p class="result-number"><span id="hoursSaved">25</span> ساعة ⏳</p>
+                </div>
+                <div class="result-box highlight">
+                    <h4>التوفير المالي التقديري</h4>
+                    <p class="result-number">$<span id="moneySaved">750</span> 💰</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ قسم المميزات (Features) -->
+    <section id="features" class="features">
+        <h2>لماذا يعتمد علينا أصحاب الأعمال؟</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">⚡</div>
+                <h3>أتمتة كاملة</h3>
+                <p>تقليل الأخطاء البشرية وتسريع إجراءات العمل بنسبة تصل إلى 80%.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📈</div>
+                <h3>تقارير لحظية</h3>
+                <p>متابعة كافة مؤشرات الأداء والنمو من لوحة تحكم واحدة بسيطة.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🤝</div>
+                <h3>دعم متواصل</h3>
+                <p>فريق من الخبراء جاهز لمساعدتك في إعداد وتطوير منظومتك.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ قسم التواصل والتسجيل (Contact Form) -->
+    <section id="contact" class="contact-section">
+        <h2>هل أنت جاهز لتطوير أعمالك؟</h2>
+        <p>اترك بياناتك وسيقوم مستشارنا الرقمي بالتواصل معك خلال 24 ساعة.</p>
+        
+        <form id="leadForm" class="contact-form">
+            <input type="text" id="userName" placeholder="الاسم الكامل" required>
+            <input type="email" id="userEmail" placeholder="البريد الإلكتروني" required>
+            <input type="tel" id="userPhone" placeholder="رقم الهاتف" required>
+            <button type="submit" class="btn btn-primary btn-block">احجز استشارتك المجانية 🚀</button>
+        </form>
+        <p id="formStatus" class="form-status"></p>
+    </section>
+
+    <!-- 6️⃣ الفوتر -->
+    <footer>
+        <p>© 2026 جميع الحقوق محفوظة - منصة النمو الرقمي</p>
+    </footer>
+
+    <!-- ربط ملف الـ JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
